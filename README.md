@@ -54,8 +54,6 @@ Hugging Face Documentation
 
 Moesif Blog on Building RESTful API with Flask
 
-This approach leverages Hugging Face for generating emotionally descriptive captions, integrating image captioning and emotion detection into a user-friendly web application. This project demonstrates the practical application of machine learning models in creating engaging and interactive tools using Hugging face 
-
 NOTE: For reference, please check the attached integrated file which includes both the model code and Flask code under the name Module.py
 
 
