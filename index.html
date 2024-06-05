@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion-Based Image Captioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        #app {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <form @submit.prevent="uploadImage">
+        <input type="file" @change="onFileChange">
+        <button type="submit">Generate Caption</button>
+    </form>
+    <div v-if="caption">
+        <img :src="imageSrc" alt="Uploaded Image">
+        <p>{{ caption }}</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            imageSrc: '',
+            caption: ''
+        },
+        methods: {
+            onFileChange(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    this.imageSrc = URL.createObjectURL(file);
+                    this.caption = ''; // Clear the caption when a new image is uploaded
+                }
+            },
+            async uploadImage() {
+                const fileInput = document.querySelector('input[type="file"]');
+                const file = fileInput.files[0];
+                const formData = new FormData();
+                formData.append('image', file);
+
+                try {
+                    const response = await fetch('http://127.0.0.1:5000/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    console.log(response)
+                    const data = await response.json();
+                    if (data.caption) {
+                        this.caption = data.caption;
+                    } else if (data.error) {
+                        this.caption = `Error: ${data.error}`;
+                    }
+                } catch (error) {
+                    this.caption = `Error: ${error.message}`;
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
