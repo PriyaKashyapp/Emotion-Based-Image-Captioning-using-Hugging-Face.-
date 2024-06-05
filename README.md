@@ -12,21 +12,20 @@ Develop a machine learning model to generate captions that describe the content 
 Create a RESTful API using Flask to handle image uploads and serve generated captions.
 Build a user-friendly web interface for uploading images and displaying captions.
 
-Prerequisites: 
+## Prerequisites: 
 
-Software Requirements:
+## Software Requirements:
 Python 3.7+
 Flask
 Hugging Face Transformers
 Torch
 Flask-CORS
 
-Hardware Requirements:
+## Hardware Requirements:
 Standard development machine with a good GPU for model training.
 
-Project Setup
-Directory Structure:
-/project_root
+## Project Setup
+Directory Structure:/project_root(Content)
 ├── app.py
 ├── image.jpg
 ├── /uploads
@@ -34,16 +33,16 @@ Directory Structure:
 
 For Security : Enable CORS using Flask-CORS to allow cross-origin requests:
 
-Summary: 
+## Summary: 
 model.py: Contains the logic for generating emotionally descriptive captions.
 app.py: Flask application that handles image uploads and uses the function from model.py.
 index.html: Vue.js frontend for uploading images and displaying the generated captions.
 
-Future Work: 
+## Future Work: 
 Enhancements: Improve the captioning model to handle more complex emotions.
 Features: Add user authentication to track user history and preferences.
 
-References :
+## References :
 Flask Documentation
 Hugging Face Documentation
 Moesif Blog on Building RESTful API with Flask
