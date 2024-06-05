@@ -2,11 +2,11 @@
 
 Leveraging Open Source Models from HuggingFace and Langchain for Generative AI
 
-Introduction :
+## Introduction :
 The "Emotion-Based Image Captioning using Hugging Face" project aims to create an application that generates descriptive and emotion-oriented captions for images. This project leverages advanced deep learning models from Hugging Face and integrates them with a Flask-based backend to provide a web interface for users to upload images and receive captions.The system will generate captions that not only describe the content of the image but also convey the emotional context.
 
 
-Objectives
+## Objectives
 
 Develop a machine learning model to generate captions that describe the content and emotional context of images.
 Create a RESTful API using Flask to handle image uploads and serve generated captions.
