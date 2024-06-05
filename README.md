@@ -26,9 +26,13 @@ Standard development machine with a good GPU for model training.
 
 ## Project Setup
 Directory Structure:/project_root(Content)
+
 ├── app.py
+
 ├── image.jpg
+
 ├── /uploads
+
 └── index.html
 
 For Security : Enable CORS using Flask-CORS to allow cross-origin requests:
@@ -43,8 +47,11 @@ Enhancements: Improve the captioning model to handle more complex emotions.
 Features: Add user authentication to track user history and preferences.
 
 ## References :
+
 Flask Documentation
+
 Hugging Face Documentation
+
 Moesif Blog on Building RESTful API with Flask
 
 This approach leverages Hugging Face for generating emotionally descriptive captions, integrating image captioning and emotion detection into a user-friendly web application. This project demonstrates the practical application of machine learning models in creating engaging and interactive tools using Hugging face 
