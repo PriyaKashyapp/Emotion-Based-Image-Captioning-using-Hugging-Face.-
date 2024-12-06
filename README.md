@@ -44,7 +44,7 @@ Salesforce/blip-image-captioning-base
 This model generates initial captions for images.
 
 Emotion Detection Model:
-microsoft/resnet-50
+microsoft/resnet-50 
 This vision transformer model is used for detecting emotions in images.
 
 
