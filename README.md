@@ -15,12 +15,7 @@ Build a user-friendly web interface for uploading images and displaying captions
 ## Prerequisites : 
 
 ## Software Requirements:
-#Python 3.7+ 
-
-#Flask
-#Hugging Face Transformers
-#Torch
-#Flask-CORS : For Security : Enable CORS using Flask-CORS to allow cross-origin requests
+Python 3.7+ , Flask , Hugging Face Transformers , Torch , Flask-CORS : For Security enable CORS using Flask-CORS to allow cross-origin requests
 
 ## Hardware Requirements :
 Standard development machine with a good GPU for model training.
@@ -28,12 +23,12 @@ Standard development machine with a good GPU for model training.
 ## Hugging Face Models and Libraries :
 
 Image Captioning Model :
-Salesforce/blip-image-captioning-base : 
-This model generates initial captions for images.
+Salesforce/blip-image-captioning-base
+( This model generates initial captions for images. ) 
 
 Emotion Detection Model :
-microsoft/resnet-50 : 
-This vision transformer model is used for detecting emotions in images.
+microsoft/resnet-50 
+( This vision transformer model is used for detecting emotions in images. )
 
 
 ## Summary : 
