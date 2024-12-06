@@ -40,11 +40,11 @@ For Security : Enable CORS using Flask-CORS to allow cross-origin requests:
 ## Hugging Face Models and Libraries:
 
 Image Captioning Model:
-Salesforce/blip-image-captioning-base
+Salesforce/blip-image-captioning-base : 
 This model generates initial captions for images.
 
 Emotion Detection Model:
-microsoft/resnet-50 
+microsoft/resnet-50 : 
 This vision transformer model is used for detecting emotions in images.
 
 
