@@ -15,27 +15,15 @@ Build a user-friendly web interface for uploading images and displaying captions
 ## Prerequisites : 
 
 ## Software Requirements:
-Python 3.7+
-Flask
-Hugging Face Transformers
-Torch
-Flask-CORS
+#Python 3.7+ 
+
+#Flask
+#Hugging Face Transformers
+#Torch
+#Flask-CORS : For Security : Enable CORS using Flask-CORS to allow cross-origin requests
 
 ## Hardware Requirements :
 Standard development machine with a good GPU for model training.
-
-## Project Setup
-Directory Structure:/project_root(Content)
-
-├── app.py
-
-├── image.jpg
-
-├── /uploads
-
-└── index.html
-
-For Security : Enable CORS using Flask-CORS to allow cross-origin requests:
 
 ## Hugging Face Models and Libraries :
 
